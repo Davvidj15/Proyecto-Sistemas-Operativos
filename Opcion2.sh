@@ -17,8 +17,25 @@ then
 
 		case $opcion in
 			a)
-				echo "";;
-			b);;
+				echo "Ingrese el nombre del archivo a eliminar:"
+                read nomEli
+            	if rm $nomEli 2> /dev/null
+                then
+                        echo "El archivo fue eliminado exitosamente."
+                else
+                        echo "El archivo no existe o ya fue eliminado."
+                fi;;
+			b)
+				echo "Ingrese el nombre del archivo a copiar:"
+                read nomCop
+                echo "Ingrese el nombre del archivo destino:"
+                read nomDest
+                if cp $nomCop $nomDest 2> /dev/null
+                then
+                        echo "El archivo fue copiado exitosamente."
+                else
+                        echo "El archivo no existe."
+                fi;;
 			c);;
 			d);;
 			e);;
