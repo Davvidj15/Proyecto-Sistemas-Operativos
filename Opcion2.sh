@@ -30,7 +30,7 @@ then
                 read nomCop
                 echo "Ingrese el nombre del archivo destino:"
                 read nomDest
-                if cp $nomCop $nomDest 2> /dev/null
+                if cp "$nomCop" "$nomDest" 2> /dev/null
                 then
                         echo "El archivo fue copiado exitosamente."
                 else
@@ -39,10 +39,10 @@ then
 			c)
 				echo "¿Qué archivo quieres mover?"
 				read archnom1
-				echo "¿A que directorio quieres mover ese archivo?"
+				echo "¿A qué directorio quieres mover ese archivo?"
 				read dir1
 				mv "$archnom1" "$dir1"
-				echo "El archivo  ha sido trasladado correctamente";;
+				echo "El archivo ha sido trasladado correctamente";;
 			d);;
 			e);;
 			0)var=0;;
