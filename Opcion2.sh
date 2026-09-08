@@ -44,7 +44,16 @@ then
 				mv "$archnom1" "$dir1"
 				echo "El archivo ha sido trasladado correctamente";;
 			d);;
-			e);;
+			e)
+				echo "¿Qué directorio quieres listar?(Utilizar ruta)"
+				read ruta1
+				if ls $ruta1 2> /dev/null
+				then
+        			echo ""
+				else
+        			echo "No se pudo listar el directorio correctamente."
+        			echo "Revise si ingresó bien la ruta del directorio deseado"
+				fi;;
 			0)var=0;;
 		esac
 	done
