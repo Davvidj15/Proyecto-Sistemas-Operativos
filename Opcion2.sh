@@ -16,9 +16,13 @@ then
 		read opcion
 
 		case $opcion in
-			1)
+			a)
 				echo "";;
+			b);;
+			c);;
+			d);;
+			e);;
+			0)var=0;;
 		esac
 	done
-else
 fi
