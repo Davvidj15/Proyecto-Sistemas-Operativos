@@ -43,7 +43,27 @@ then
 				read dir1
 				mv "$archnom1" "$dir1"
 				echo "El archivo ha sido trasladado correctamente";;
-			d);;
+			d)
+				echo "Ingrese la ruta del archivo que desea ver los permisos:"
+				read rutArch
+				if [-r "$rutArch"] 2> /dev/null
+				then
+						echo "El archivo $rutArch tiene permiso de lectura"
+				else
+						echo "El archivo $rutArch no tiene permiso de lectura"
+				fi
+				if [-w "$rutArch"] 2> /dev/null
+				then
+						echo "El archivo $rutArch tiene permiso de escritura"
+				else
+						echo "El archivo $rutArch no tiene permiso de escritura"
+				fi
+				if [-x "$rutArch"] 2> /dev/null
+				then
+						echo "El archivo $rutArch tiene permiso de ejecución"
+				else
+						echo "El archivo $rutArch no tiene permiso de ejecución"
+				fi;;
 			e)
 				echo "¿Qué directorio quieres listar?(Utilizar ruta)"
 				read ruta1
