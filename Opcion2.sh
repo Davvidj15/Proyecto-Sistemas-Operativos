@@ -36,7 +36,13 @@ then
                 else
                         echo "El archivo no existe."
                 fi;;
-			c);;
+			c)
+				echo "¿Qué archivo quieres mover?"
+				read archnom1
+				echo "¿A que directorio quieres mover ese archivo?"
+				read dir1
+				mv "$archnom1" "$dir1"
+				echo "El archivo  ha sido trasladado correctamente";;
 			d);;
 			e);;
 			0)var=0;;
