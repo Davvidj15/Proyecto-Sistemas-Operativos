@@ -1,3 +1,4 @@
+# no terminado
 #!/bin/bash
 var=1
 if test "$var" == 1
