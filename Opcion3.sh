@@ -1,3 +1,4 @@
+# no terminado
 #!/bin/bash
 num=1
 while test "$num" == 1
