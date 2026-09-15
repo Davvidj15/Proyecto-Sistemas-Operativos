@@ -50,9 +50,19 @@ do
 		e)
 			echo "Ingrese su CI:"
 			read CI
-			sed -i "/${CI}/d" DatosPersonales.txt
+			if test sed -i "/${CI}/d" DatosPersonales.txt
+			then
+					echo "Se ha borrado la línea exitosamente"
+			else
+					echo "La línea ya ha sido borrada o no existe"
+			fi;;
+		f)
+			echo "Ingrese su CI:"
+			read CI
+			echo "Ingrese su nuevo número de teléfono:"
+			read newTelefono
+			sed -i "" DatosPersonales.txt
 			;;
-		f);;
 		0)num=0;;
 	esac
 done	
