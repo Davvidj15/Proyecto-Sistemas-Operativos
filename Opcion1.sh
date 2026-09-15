@@ -1,6 +1,7 @@
+#!/bin/bash
 echo "¿Desea crear un directorio? (Si o No)"
 read vRespuesta
-if test $vRespuesta == "Si" -o $vRespuesta == "si"
+if test "$vRespuesta" == "Si" -o "$vRespuesta" == "si"
 then
         echo "Ingrese el nombre que desea poner al directorio:"
         read nomDir
