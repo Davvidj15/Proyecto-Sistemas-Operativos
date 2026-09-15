@@ -1,3 +1,4 @@
+#!/bin/bash
 vRespuesta=1
 if test "$vRespuesta" == 1
 then
