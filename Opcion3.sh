@@ -50,7 +50,7 @@ do
 		e)
 			echo "Ingrese su CI:"
 			read CI
-			sed -i "${CI}d" DatosPersonales.txt
+			sed -i "/${CI}/d" DatosPersonales.txt
 			;;
 		f);;
 		0)num=0;;
