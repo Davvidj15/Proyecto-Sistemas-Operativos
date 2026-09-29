@@ -1,4 +1,6 @@
 #!/bin/bash
+#Opcion 1
+
 echo "¿Desea crear un directorio? (Si o No)"
 read vRespuesta
 if test "$vRespuesta" == "Si" -o "$vRespuesta" == "si"
