@@ -1,5 +1,7 @@
 # no terminado
 #!/bin/bash
+#Opcion 3
+
 num=1
 while test "$num" == 1
 do	
