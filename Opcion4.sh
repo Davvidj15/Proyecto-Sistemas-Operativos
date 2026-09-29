@@ -5,7 +5,7 @@ perm=1
 while test "$perm" = 1
 do
 	echo "---------------------------------------------"
-	echo "	Cambiar permisos de archivo o directorio"
+	echo " Cambiar permisos de archivo o directorio"
 	echo "---------------------------------------------"
 	echo "a. Cambiar permisos en modo numérico (Ej: 755)"
 	echo "b. Cambiar permisos en modo simbólico (Ej: u+x)"
