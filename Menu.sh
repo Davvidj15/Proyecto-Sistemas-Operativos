@@ -1,4 +1,5 @@
 #!/bin/bash
+# Menú principal del sistema
 . ./funciones.sh
 
 echo "Ingrese su nombre de usuario:"
