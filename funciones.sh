@@ -3,7 +3,7 @@
 
 LOG="acciones.log"
 ARCHIVO_AGENDA="DatosPersonales.txt"
-INTEGRANTES="Integrantes del grupo: Araque, David, Rodríguez, Ignacio"
+INTEGRANTES="Integrantes del grupo: Araque David, Rodríguez Ignacio"
 CLAVE_LOG="so2026"
 
 mostrar_encabezado() {
