@@ -1,9 +1,12 @@
 #!/bin/bash
-#Opcion 4
+# Opción 4: Cambiar permisos de un archivo o directorio
+. ./funciones.sh
 
 perm=1
 while test "$perm" = 1
 do
+	clear
+	mostrar_encabezado
 	echo "---------------------------------------------"
 	echo " Cambiar permisos de archivo o directorio"
 	echo "---------------------------------------------"
@@ -11,6 +14,7 @@ do
 	echo "b. Cambiar permisos en modo simbólico (Ej: u+x)"
 	echo "0. Salir"
 	echo "---------------------------------------------"
+	mostrar_pie
 	read opcion
 
 	case $opcion in
@@ -19,7 +23,8 @@ do
 			read ruta
 			if [ ! -e "$ruta" ]
 			then
-				echo "El archivo o directorio $ruta no existe."
+				error_rojo "El archivo o directorio $ruta no existe."
+				registrar_log "4a" "chmod $ruta (no existe)"
 			else
 				echo "Permisos actuales:"
 				ls -ld "$ruta"
@@ -31,12 +36,15 @@ do
 					then
 						echo "Los permisos fueron cambiados exitosamente."
 						ls -ld "$ruta"
+						registrar_log "4a" "chmod $modo $ruta"
 					else
-						echo "No se pudieron cambiar los permisos."
-						echo "Revise que sea el dueño del archivo o directorio."
+						error_rojo "No se pudieron cambiar los permisos."
+						error_rojo "Revise que sea el dueño del archivo o directorio."
+						registrar_log "4a" "chmod $modo $ruta (error)"
 					fi
 				else
-					echo "El modo $modo no es válido. Debe ingresar 3 dígitos del 0 al 7."
+					error_rojo "El modo $modo no es válido. Debe ingresar 3 dígitos del 0 al 7."
+					registrar_log "4a" "chmod $modo $ruta (modo inválido)"
 				fi
 			fi;;
 		b)
@@ -44,7 +52,8 @@ do
 			read ruta
 			if [ ! -e "$ruta" ]
 			then
-				echo "El archivo o directorio $ruta no existe."
+				error_rojo "El archivo o directorio $ruta no existe."
+				registrar_log "4b" "chmod $ruta (no existe)"
 			else
 				echo "Permisos actuales:"
 				ls -ld "$ruta"
@@ -57,7 +66,7 @@ do
 				case $quien in
 					u|g|o|a) ;;
 					*)
-						echo "Opción inválida, se aplicará a todos (a)."
+						error_rojo "Opción inválida, se aplicará a todos (a)."
 						quien="a";;
 				esac
 				echo "¿Qué desea hacer?"
@@ -68,7 +77,7 @@ do
 				case $accion in
 					+|-|=) ;;
 					*)
-						echo "Opción inválida, se agregarán los permisos (+)."
+						error_rojo "Opción inválida, se agregarán los permisos (+)."
 						accion="+";;
 				esac
 				echo "Ingrese los permisos (r lectura, w escritura, x ejecución):"
@@ -80,24 +89,25 @@ do
 					then
 						echo "Los permisos fueron cambiados exitosamente."
 						ls -ld "$ruta"
+						registrar_log "4b" "chmod $quien$accion$permisos $ruta"
 					else
-						echo "No se pudieron cambiar los permisos."
-						echo "Revise que sea el dueño del archivo o directorio."
+						error_rojo "No se pudieron cambiar los permisos."
+						error_rojo "Revise que sea el dueño del archivo o directorio."
+						registrar_log "4b" "chmod $quien$accion$permisos $ruta (error)"
 					fi
 				else
-					echo "Los permisos $permisos no son válidos. Use solo r, w o x."
+					error_rojo "Los permisos $permisos no son válidos. Use solo r, w o x."
+					registrar_log "4b" "chmod (permisos inválidos)"
 				fi
 			fi;;
 		0)
 			perm=0;;
 		*)
-			echo "Opción inválida. Elija a, b o 0 para salir.";;
+			error_rojo "Opción inválida. Elija a, b o 0 para salir.";;
 	esac
 
 	if test "$perm" = 1
 	then
-		echo ""
-		echo "Presione Enter para continuar..."
-		read enter
+		pausar
 	fi
 done
