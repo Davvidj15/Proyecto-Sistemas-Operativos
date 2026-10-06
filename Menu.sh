@@ -2,15 +2,11 @@
 # Menú principal del sistema
 . ./funciones.sh
 
-echo "Ingrese su nombre de usuario:"
-read USUARIO
-export USUARIO
-registrar_log "login" "ingreso al sistema"
-
 vRespuesta=1
 while test "$vRespuesta" == 1
 do
 	clear
+	registrar_log "El usuario $(whoami) ha ingresado"
 	mostrar_encabezado
 	echo "	Bienvenido al menú"
 	echo "-------------------------------------------------------"
