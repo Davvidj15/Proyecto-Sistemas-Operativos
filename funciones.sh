@@ -8,7 +8,7 @@ CLAVE_LOG="so2026"
 
 mostrar_encabezado() {
 	echo "-------------------------------------------------------"
-	echo "${USUARIO:-$(whoami)} | $(. /etc/os-release && echo "$PRETTY_NAME") | $(date '+%d/%m/%Y %H:%M:%S')"
+	echo "$(whoami) | $(. /etc/os-release && echo "$PRETTY_NAME") | $(date '+%d/%m/%Y %H:%M:%S')"
 	echo "-------------------------------------------------------"
 }
 
