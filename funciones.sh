@@ -23,7 +23,7 @@ error_rojo() {
 }
 
 registrar_log() {
-	echo "$(date +%Y-%m-%d)|$(date +%H:%M:%S)|${USUARIO:-$(whoami)}|$1|$2" >> "$LOG"
+	echo "$(date +%Y-%m-%d)|$(date +%H:%M:%S)|$(whoami)|$1|$2" >> "$LOG"
 }
 
 pausar() {
