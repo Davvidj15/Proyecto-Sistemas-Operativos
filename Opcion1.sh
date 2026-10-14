@@ -7,13 +7,11 @@ while test "$num" == 1
 do
 	clear
 	mostrar_encabezado
-	echo "-----------------------------"
 	echo " Acciones sobre directorios"
 	echo "-----------------------------"
-	echo "a) Crear un directorio"
-	echo "b) Eliminar un directorio"
-	echo "0) Volver al menú principal"
-	echo "-----------------------------"
+	echo "a. Crear un directorio"
+	echo "b. Eliminar un directorio"
+	echo "0. Volver al menú principal"
 	mostrar_pie
 	read opcion
 	case $opcion in
