@@ -18,9 +18,6 @@ do
 	echo "6) Mostrar los meses del año ingresados(formato calendario)"
 	echo "7) Archivo de log"
 	echo "0) Salir"
-	echo "-------------------------------------------------------"
-	echo "Pedido de datos, muestra de información, listados, etc"
-	echo "-------------------------------------------------------"
 	mostrar_pie
 	read opcion
 	case $opcion in
