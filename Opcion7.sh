@@ -17,7 +17,8 @@ do
 	echo "0) Volver al menú principal"
 	echo "---------------------------------------------"
 	mostrar_pie
-	read opcion
+	read -p "Ingrese una opción: " opcion
+	
 	case $opcion in
 		a)
 			if test -f "$LOG"
