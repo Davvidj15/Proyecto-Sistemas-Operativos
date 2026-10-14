@@ -7,6 +7,7 @@ while test "$num" == 1
 do
 	clear
 	mostrar_encabezado
+	echo " Acciones sobre un archivo"
 	echo "-----------------------------"
 	echo "a) Crear un archivo con la siguiente información “CI:Nombre:Apellido:Teléfono:Fecha de Nacimiento:edad”."
 	echo "b) Ver el contenido completo en formato listado."
@@ -15,7 +16,6 @@ do
 	echo "e) Eliminar una línea del archivo según la CI ingresada."
 	echo "f) Permitir modificar el teléfono de una persona a través de su CI."
 	echo "0) Salir."
-	echo "-----------------------------"
 	mostrar_pie
 	read opcion
 	case $opcion in
