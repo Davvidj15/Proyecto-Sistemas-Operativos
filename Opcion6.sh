@@ -12,7 +12,7 @@ do
 	echo "a. Ver el calendario deseado"
 	echo "0. Salir"
 	mostrar_pie
-	read -p "Ingrese la opción: " opcion
+	read -p "Ingrese una opción: " opcion
 
 	case $opcion in
 		a)
