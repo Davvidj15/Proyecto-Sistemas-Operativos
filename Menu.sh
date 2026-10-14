@@ -19,7 +19,7 @@ do
 	echo "7) Archivo de log"
 	echo "0) Salir"
 	mostrar_pie
-	read opcion
+	read -p "Ingrese una opción: " opcion
 	case $opcion in
 		1)
 			registrar_log "1" "bash Opcion1.sh"
