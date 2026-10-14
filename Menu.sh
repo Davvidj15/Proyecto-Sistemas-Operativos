@@ -20,6 +20,7 @@ do
 	echo "0) Salir"
 	mostrar_pie
 	read -p "Ingrese una opción: " opcion
+	
 	case $opcion in
 		1)
 			registrar_log "1" "bash Opcion1.sh"
