@@ -34,11 +34,11 @@ do
 			then
 				dia=`echo "$fnac" | cut -d/ -f1 | sed 's/^0//'`
 				mes=`echo "$fnac" | cut -d/ -f2 | sed 's/^0//'`
-				anio=`echo "$fnac" | cut -d/ -f3`
-				anio_act=`date +%Y`
+				año=`echo "$fnac" | cut -d/ -f3`
+				año_act=`date +%Y`
 				mes_act=`date +%m | sed 's/^0//'`
 				dia_act=`date +%d | sed 's/^0//'`
-				edad=`expr "$anio_act" - "$anio"`
+				edad=`expr "$año_act" - "$año"`
 				if test "$mes_act" -lt "$mes" -o "$mes_act" -eq "$mes" -a "$dia_act" -lt "$dia"
 				then
 					edad=`expr "$edad" - 1`
