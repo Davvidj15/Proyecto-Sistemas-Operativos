@@ -7,7 +7,6 @@ while test "$var" == 1
 do
 	clear
 	mostrar_encabezado
-	echo "-------------------------"
 	echo "	Menu de Archivos"
 	echo "-------------------------"
 	echo "a. Eliminar archivo"
@@ -16,7 +15,6 @@ do
 	echo "d. Mostrar permisos del archivo"
 	echo "e. Mostrar listado de archivos"
 	echo "0. Salir"
-	echo "-------------------------"
 	mostrar_pie
 	read opcion
 
