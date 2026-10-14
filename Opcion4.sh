@@ -7,13 +7,11 @@ while test "$perm" = 1
 do
 	clear
 	mostrar_encabezado
-	echo "---------------------------------------------"
 	echo " Cambiar permisos de archivo o directorio"
 	echo "---------------------------------------------"
 	echo "a. Cambiar permisos en modo numérico (Ej: 755)"
 	echo "b. Cambiar permisos en modo simbólico (Ej: u+x)"
 	echo "0. Salir"
-	echo "---------------------------------------------"
 	mostrar_pie
 	read opcion
 
