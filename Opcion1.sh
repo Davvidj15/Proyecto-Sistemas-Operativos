@@ -13,7 +13,8 @@ do
 	echo "b. Eliminar un directorio"
 	echo "0. Volver al menú principal"
 	mostrar_pie
-	read opcion
+	read -p "Ingrese una opción: " opcion
+	
 	case $opcion in
 		a)
 			echo "Ingrese el nombre que desea poner al directorio:"
