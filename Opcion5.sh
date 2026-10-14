@@ -7,7 +7,6 @@ while test "$num" == 1
 do
 	clear
 	mostrar_encabezado
-	echo "---------------------------------------------"
 	echo " Fecha y/o hora del sistema"
 	echo "---------------------------------------------"
 	echo "a) año/mes/día"
@@ -15,7 +14,6 @@ do
 	echo "c) Días transcurridos desde el comienzo del año"
 	echo "d) Hora actual"
 	echo "0) Volver al menú principal"
-	echo "---------------------------------------------"
 	mostrar_pie
 	read opcion
 	case $opcion in
