@@ -13,7 +13,7 @@ do
 	echo "b. Cambiar permisos en modo simbólico (Ej: u+x)"
 	echo "0. Salir"
 	mostrar_pie
-	read opcion
+	read -p "Ingrese una opción: " opcion
 
 	case $opcion in
 		a)
