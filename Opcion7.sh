@@ -20,6 +20,7 @@ do
 	read opcion
 	case $opcion in
 		a)
+					a)
 			if test -f "$LOG"
 			then
 				echo "Ingrese la fecha desde (aaaa-mm-dd):"
@@ -29,9 +30,13 @@ do
 				echo "Fecha | Hora | Usuario | Opción | Comando"
 				echo "---------------------------------------------"
 				encontrado=0
+				# Quitamos los guiones para comparar las fechas como números (2026-10-05 → 20261005)
+				desde_num=$(echo "$desde" | tr -d '-')
+				hasta_num=$(echo "$hasta" | tr -d '-')
 				while IFS="|" read fecha hora usuario opcionlog comando
 				do
-					if test "$fecha" \>= "$desde" -a "$fecha" \<= "$hasta"
+					fecha_num=$(echo "$fecha" | tr -d '-')
+					if test "$fecha_num" -ge "$desde_num" -a "$fecha_num" -le "$hasta_num"
 					then
 						echo "$fecha | $hora | $usuario | $opcionlog | $comando"
 						encontrado=1
