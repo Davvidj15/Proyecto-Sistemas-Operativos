@@ -20,7 +20,6 @@ do
 	read opcion
 	case $opcion in
 		a)
-					a)
 			if test -f "$LOG"
 			then
 				echo "Ingrese la fecha desde (aaaa-mm-dd):"
