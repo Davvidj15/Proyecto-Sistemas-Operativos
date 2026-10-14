@@ -15,7 +15,8 @@ do
 	echo "d) Hora actual"
 	echo "0) Volver al menú principal"
 	mostrar_pie
-	read opcion
+	read -p "Ingrese una opción: " opcion
+	
 	case $opcion in
 		a)
 			date +%Y/%m/%d
