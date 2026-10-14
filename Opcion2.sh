@@ -2,8 +2,8 @@
 # Opción 2: Acciones sobre archivos
 . ./funciones.sh
 
-var=1
-while test "$var" == 1
+num=1
+while test "$num" == 1
 do
 	clear
 	mostrar_encabezado
@@ -16,7 +16,7 @@ do
 	echo "e. Mostrar listado de archivos"
 	echo "0. Salir"
 	mostrar_pie
-	read opcion
+	read -p "Ingrese una opción: " opcion
 
 	case $opcion in
 		a)
