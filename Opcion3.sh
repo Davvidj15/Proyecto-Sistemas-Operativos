@@ -63,8 +63,7 @@ do
 		else
 			error_rojo "Fecha inválida. Use el formato dd/mm/aaaa."
 			registrar_log "3a" "agregar persona (fecha inválida)"
-		fi
-		pausar;;
+		fi;;
 
 	b)
 		if test -f "$ARCHIVO_AGENDA"
@@ -81,8 +80,7 @@ do
 		else
 			error_rojo "La agenda no existe. Agregue una persona con la opción a."
 			registrar_log "3b" "listar (archivo no existe)"
-		fi
-		pausar;;
+		fi;;
 
 	c)
 		if test -f "$ARCHIVO_AGENDA"
@@ -97,8 +95,7 @@ do
 		else
 			error_rojo "La agenda no existe. Agregue una persona con la opción a."
 			registrar_log "3c" "ver líneas (archivo no existe)"
-		fi
-		pausar;;
+		fi;;
 
 	d)
 		if test -f "$ARCHIVO_AGENDA"
@@ -134,8 +131,7 @@ do
 		else
 			error_rojo "La agenda no existe. Agregue una persona con la opción a."
 			registrar_log "3d" "buscar (archivo no existe)"
-		fi
-		pausar;;
+		fi;;
 
 	e)
 		if test -f "$ARCHIVO_AGENDA"
@@ -157,8 +153,7 @@ do
 		else
 			error_rojo "La agenda no existe. Agregue una persona con la opción a."
 			registrar_log "3e" "eliminar (archivo no existe)"
-		fi
-		pausar;;
+		fi;;
 
 	f)
 		if test -f "$ARCHIVO_AGENDA"
@@ -193,14 +188,16 @@ do
 		else
 			error_rojo "La agenda no existe. Agregue una persona con la opción a."
 			registrar_log "3f" "modificar teléfono (archivo no existe)"
-		fi
-		pausar;;
+		fi;;
 
 	0)
 		num=0;;
 
 	*)
-		error_rojo "Opción inválida. Elija una letra de la a a la f, o 0 para salir."
-		pausar;;
+		error_rojo "Opción inválida. Elija una letra de la a a la f, o 0 para salir.";;
 	esac
+	if test "$num" = 1
+	then
+		pausar
+	fi
 done
