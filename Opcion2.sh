@@ -8,7 +8,7 @@ do
 	clear
 	mostrar_encabezado
 	echo "	Menu de Archivos"
-	echo "-------------------------"
+	echo "------------------------------------"
 	echo "a. Eliminar archivo"
 	echo "b. Copiar archivo"
 	echo "c. Mover archivo"
