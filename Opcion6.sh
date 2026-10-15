@@ -41,6 +41,5 @@ do
 			pausar;;
 
 		0) num=0;;
-
 	esac
 done
