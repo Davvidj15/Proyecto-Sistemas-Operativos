@@ -39,7 +39,7 @@ do
 				registrar_log "6" "cal (mes inválido)"
 			fi
 			pausar;;
-
-		0) num=0;;
+		0) 
+			num=0;;
 	esac
 done
