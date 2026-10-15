@@ -39,20 +39,21 @@ do
 				12) mesnom="diciembre";;
 			esac
 			echo "Hoy es $(date +%d) de $mesnom del año $(date +%Y)"
-			registrar_log "5b" "date formato texto"
-			pausar;;
+			registrar_log "5b" "date formato texto";;
 		c)
 			echo "Han pasado $(date +%j) días desde el comienzo del año"
-			registrar_log "5c" "date +%j"
-			pausar;;
+			registrar_log "5c" "date +%j";;
 		d)
 			date +%H:%M:%S
-			registrar_log "5d" "date +%H:%M:%S"
-			pausar;;
+			registrar_log "5d" "date +%H:%M:%S";;
 		0)
 			num=0;;
 		*)
-			error_rojo "Opción inválida. Elija a, b, c, d o 0."
-			pausar;;
+			error_rojo "Opción inválida. Elija a, b, c, d o 0.";;
 	esac
+
+	if test "$num" = 1
+	then
+		pausar
+	fi
 done
