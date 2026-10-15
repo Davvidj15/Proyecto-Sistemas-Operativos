@@ -2,8 +2,8 @@
 # Opción 4: Cambiar permisos de un archivo o directorio
 . ./funciones.sh
 
-perm=1
-while test "$perm" = 1
+num=1
+while test "$num" = 1
 do
 	clear
 	mostrar_encabezado
@@ -99,12 +99,12 @@ do
 				fi
 			fi;;
 		0)
-			perm=0;;
+			num=0;;
 		*)
 			error_rojo "Opción inválida. Elija a, b o 0 para salir.";;
 	esac
 
-	if test "$perm" = 1
+	if test "$num" = 1
 	then
 		pausar
 	fi
