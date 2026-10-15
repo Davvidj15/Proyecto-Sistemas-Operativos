@@ -41,11 +41,11 @@ do
 			# Separamos día, mes y año usando "/" como separador
 			dia=$(echo "$fnac" | cut -d/ -f1)
 			mes=$(echo "$fnac" | cut -d/ -f2)
-			anio=$(echo "$fnac" | cut -d/ -f3)
+			año=$(echo "$fnac" | cut -d/ -f3)
 
 			# Edad = año actual - año de nacimiento
-			anio_actual=$(date +%Y)
-			edad=$((anio_actual - anio))
+			año_actual=$(date +%Y)
+			edad=$((año_actual - año))
 
 			# Si todavía no cumplió años este año, le restamos 1.
 			# Comparamos mes y día juntos como un número.
