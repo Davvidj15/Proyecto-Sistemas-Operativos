@@ -26,8 +26,7 @@ do
 			else
 				error_rojo "El directorio $nomDir ya existe"
 				registrar_log "1a" "mkdir $nomDir (error: ya existe)"
-			fi
-			pausar;;
+			fi;;
 		b)
 			echo "Ingrese el nombre del directorio a eliminar:"
 			read eliDir
@@ -44,12 +43,15 @@ do
 			else
 				error_rojo "El directorio $eliDir no existe"
 				registrar_log "1b" "rm -r $eliDir (no existe)"
-			fi
-			pausar;;
+			fi;;
 		0)
 			num=0;;
 		*)
-			error_rojo "Opción inválida. Elija a, b o 0."
-			pausar;;
+			error_rojo "Opción inválida. Elija a, b o 0.";;
 	esac
+
+	if test "$num" = 1
+	then
+		pausar
+	fi
 done
