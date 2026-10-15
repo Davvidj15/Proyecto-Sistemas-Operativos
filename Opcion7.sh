@@ -49,8 +49,7 @@ do
 				registrar_log "7a" "filtrar log entre $desde y $hasta"
 			else
 				error_rojo "Todavía no existe el archivo de log."
-			fi
-			pausar;;
+			fi;;
 		b)
 			if test -f "$LOG"
 			then
@@ -74,8 +73,7 @@ do
 				registrar_log "7b" "filtrar log por accion $tipo"
 			else
 				error_rojo "Todavía no existe el archivo de log."
-			fi
-			pausar;;
+			fi;;
 		c)
 			if test -f "$LOG"
 			then
@@ -99,8 +97,7 @@ do
 				registrar_log "7c" "filtrar log por usuario $usu"
 			else
 				error_rojo "Todavía no existe el archivo de log."
-			fi
-			pausar;;
+			fi;;
 		d)
 			echo "Ingrese la contraseña de autorización:"
 			read clave
@@ -116,12 +113,15 @@ do
 			else
 				error_rojo "Contraseña incorrecta. No se eliminó el log."
 				registrar_log "7d" "rm $LOG (contraseña incorrecta)"
-			fi
-			pausar;;
+			fi;;
 		0)
 			num=0;;
 		*)
-			error_rojo "Opción inválida. Elija a, b, c, d o 0."
-			pausar;;
+			error_rojo "Opción inválida. Elija a, b, c, d o 0.";;
 	esac
+
+	if test "$num" = 1
+	then
+		pausar
+	fi
 done
