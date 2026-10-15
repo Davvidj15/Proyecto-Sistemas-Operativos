@@ -99,12 +99,12 @@ do
 				registrar_log "2e" "ls $ruta1 (error)"
 			fi;;
 		0)
-			var=0;;
+			num=0;;
 		*)
 			error_rojo "Opción inválida. Elija una letra entre a y e, o 0 para salir.";;
 	esac
 
-	if test "$var" == 1
+	if test "$num" == 1
 	then
 		pausar
 	fi
