@@ -196,6 +196,7 @@ do
 	*)
 		error_rojo "Opción inválida. Elija una letra de la a a la f, o 0 para salir.";;
 	esac
+	
 	if test "$num" = 1
 	then
 		pausar
