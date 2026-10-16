@@ -1,5 +1,5 @@
 #!/bin/bash
-# Opción 6: Mostrar los meses del año ingresados(formato calendario)
+# Opción 6: Mostrar los meses del anio ingresados(formato calendario)
 . ./funciones.sh
 
 num=1
@@ -18,7 +18,7 @@ do
 		a)
 			echo "Ingrese el o los meses que desea ver (1-12), separados por espacio:"
 			read meses
-			echo "Ingrese el año de esos meses:"
+			echo "Ingrese el anio de esos meses:"
 			read year
 
 			error=0

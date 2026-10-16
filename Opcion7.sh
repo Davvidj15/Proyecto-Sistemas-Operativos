@@ -99,7 +99,7 @@ do
 				error_rojo "Todavía no existe el archivo de log."
 			fi;;
 		d)
-			echo "Ingrese la contraseña de autorización:"
+			echo "Ingrese la contrasenia de autorización:"
 			read clave
 			if test "$clave" = "$CLAVE_LOG"
 			then
@@ -111,8 +111,8 @@ do
 					error_rojo "No hay archivo de log para eliminar."
 				fi
 			else
-				error_rojo "Contraseña incorrecta. No se eliminó el log."
-				registrar_log "7d" "rm $LOG (contraseña incorrecta)"
+				error_rojo "Contrasenia incorrecta. No se eliminó el log."
+				registrar_log "7d" "rm $LOG (contrasenia incorrecta)"
 			fi;;
 		0)
 			num=0;;

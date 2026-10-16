@@ -15,7 +15,7 @@ do
 	echo "3) Acciones sobre el contenido de un archivo"
 	echo "4) Cambiar permisos de un archivo o directorio"
 	echo "5) Mostrar fecha y/o hora del sistema operativo"
-	echo "6) Mostrar los meses del año ingresados(formato calendario)"
+	echo "6) Mostrar los meses del anio ingresados(formato calendario)"
 	echo "7) Archivo de log"
 	echo "0) Salir"
 	mostrar_pie
