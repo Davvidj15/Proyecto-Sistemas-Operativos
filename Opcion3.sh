@@ -2,7 +2,7 @@
 # Opción 3: Acciones sobre el contenido de un archivo tipo agenda
 # Formato de cada línea: CI:Nombre:Apellido:Teléfono:FechaNacimiento:Edad
 # test -f verifica si el expresión existe
-# test -z verifica que el tamaño del string sea cero
+# test -z verifica que el tamaño del string sea cero 
 . ./funciones.sh
 
 num=1
