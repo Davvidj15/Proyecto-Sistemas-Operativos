@@ -9,9 +9,9 @@ do
 	mostrar_encabezado
 	echo " Fecha y/o hora del sistema"
 	echo "---------------------------------------------"
-	echo "a) anio/mes/día"
-	echo "b) Hoy es día de mes del anio"
-	echo "c) Días transcurridos desde el comienzo del anio"
+	echo "a) año/mes/día"
+	echo "b) Hoy es día de mes del año"
+	echo "c) Días transcurridos desde el comienzo del año"
 	echo "d) Hora actual"
 	echo "0) Volver al menú principal"
 	mostrar_pie
@@ -38,10 +38,10 @@ do
 				11) mesnom="noviembre";;
 				12) mesnom="diciembre";;
 			esac
-			echo "Hoy es $(date +%d) de $mesnom del anio $(date +%Y)"
+			echo "Hoy es $(date +%d) de $mesnom del año $(date +%Y)"
 			registrar_log "5b" "date formato texto";;
 		c)
-			echo "Han pasado $(date +%j) días desde el comienzo del anio"
+			echo "Han pasado $(date +%j) días desde el comienzo del año"
 			registrar_log "5c" "date +%j";;
 		d)
 			date +%H:%M:%S

@@ -37,7 +37,7 @@ do
 						registrar_log "4a" "chmod $modo $ruta"
 					else
 						error_rojo "No se pudieron cambiar los permisos."
-						error_rojo "Revise que sea el duenio del archivo o directorio."
+						error_rojo "Revise que sea el dueño del archivo o directorio."
 						registrar_log "4a" "chmod $modo $ruta (error)"
 					fi
 				else
@@ -56,7 +56,7 @@ do
 				echo "Permisos actuales:"
 				ls -ld "$ruta"
 				echo "¿A quién desea cambiarle los permisos?"
-				echo "u) Usuario duenio"
+				echo "u) Usuario dueño"
 				echo "g) Grupo"
 				echo "o) Otros"
 				echo "a) Todos"
@@ -90,7 +90,7 @@ do
 						registrar_log "4b" "chmod $quien$accion$permisos $ruta"
 					else
 						error_rojo "No se pudieron cambiar los permisos."
-						error_rojo "Revise que sea el duenio del archivo o directorio."
+						error_rojo "Revise que sea el dueño del archivo o directorio."
 						registrar_log "4b" "chmod $quien$accion$permisos $ruta (error)"
 					fi
 				else

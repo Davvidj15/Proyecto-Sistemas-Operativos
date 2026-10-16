@@ -2,7 +2,7 @@
 # Opción 3: Acciones sobre el contenido de un archivo tipo agenda
 # Formato de cada línea: CI:Nombre:Apellido:Teléfono:FechaNacimiento:Edad
 # test -f verifica si el expresión existe
-# test -z verifica que el tamanio del string sea cero
+# test -z verifica que el tamaño del string sea cero
 . ./funciones.sh
 
 num=1
@@ -38,18 +38,18 @@ do
 		# Comprobamos que la fecha tenga el formato dd/mm/aaaa
 		if echo "$fnac" | grep -q "^[0-9][0-9]/[0-9][0-9]/[0-9][0-9][0-9][0-9]$"
 		then
-			# Separamos día, mes y anio usando "/" como separador
+			# Separamos día, mes y año usando "/" como separador
 			dia=$(echo "$fnac" | cut -d/ -f1)
 			mes=$(echo "$fnac" | cut -d/ -f2)
 			anio=$(echo "$fnac" | cut -d/ -f3)
 
-			# Edad = anio actual - anio de nacimiento
+			# Edad = año actual - año de nacimiento
 			anio_actual=$(date +%Y)
 			edad=$((anio_actual - anio))
 
-			# Si todavía no cumplió anios este anio, le restamos 1.
+			# Si todavía no cumplió años este año, le restamos 1.
 			# Comparamos mes y día juntos como un número.
-			# Ejemplo: hoy 14/10 es 1014 y un cumpleanios el 25/12 es 1225
+			# Ejemplo: hoy 14/10 es 1014 y un cumpleaños el 25/12 es 1225
 			hoy=$(date +%m%d)
 			cumple="$mes$dia"
 			if test "$hoy" -lt "$cumple"
