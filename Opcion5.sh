@@ -20,8 +20,7 @@ do
 	case $opcion in
 		a)
 			date +%Y/%m/%d
-			registrar_log "5a" "date +%Y/%m/%d"
-			pausar;;
+			registrar_log "5a" "date +%Y/%m/%d";;
 		b)
 			mesn=`date +%m`
 			case $mesn in
